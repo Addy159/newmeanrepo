@@ -1,0 +1,63 @@
+<table id="students">
+    <tr>
+        <th style="text-align:center">First Name</th>
+        <th style="text-align:center">Last Name</th>
+        <th style="text-align:center">Email</th>
+        <th style="text-align:center">Telephone</th>
+        <th style="text-align:center">View</th>
+        <th style="text-align:center">Edit</th>
+        <th style="text-align:center">Delete</th>
+    </tr>
+
+    <tr *ngFor = "let student of students" >
+        <!-- <td>{{student.id}}</td> -->
+       <td>{{student.fname}}</td>
+       <td>{{student.lname}}</td>
+       <td>{{student.email}}</td>
+       <td>{{student.telephone}}</td>
+       <td><button routerLink="/student/{{student._id}}" class="view button">View</button></td>
+       <td><button (click)="editStudent(student._id)" class="edit button">edit</button></td>
+       <td><button (click)="removeStudent(student._id)" class="delete button">delete</button></td>
+    </tr>
+</table>
+
+<button routerLink="/create" class="createStudent">create Student</button>
+
+<div #update class="container">
+    
+    <form [formGroup]="studentForm" (submit)="updateStudent()" >
+        <p class="close" (click)="closeUpdateForm()">x</p>
+        <div class="firstLast">
+            
+            <div class="input-field">
+                <label for="">First Name</label>
+                <input type="text" formControlName="fname">
+                <!-- <span class="error" *ngIf="(createControl['fname']?.touched || submitted && createControl['fname']?.errors?.['required'])"> <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    Enter First Name</span> -->
+            </div>
+    
+            <div class="input-field">
+                <label for="">Last Name</label>
+                <input type="text" formControlName="lname">
+                <!-- <span class="error" *ngIf="(createControl['lname']?.touched || submitted && createControl['lname']?.errors?.['required'])"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>Enter Last Name</span> -->
+            </div>
+
+        </div>
+        
+        <div class="input-field">
+            <label for="">Email</label>
+            <input type="text" formControlName="email">
+            <!-- <span class="error" *ngIf="(createControl['email']?.touched || submitted && createControl['email']?.errors?.['required'])"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>Enter email</span> -->
+        </div>
+
+        <div class="input-field">
+            <label for="">Telephone</label>
+            <input type="text" formControlName="telephone">
+            <!-- <span class="error" *ngIf="(createControl['telephone']?.touched || submitted && createControl['telephone']?.errors?.['required'])"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>Enter telephone number</span> -->
+        </div>
+        
+        <button>update</button>
+    </form>
+</div>
+
+

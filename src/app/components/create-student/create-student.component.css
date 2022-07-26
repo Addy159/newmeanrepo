@@ -1,0 +1,54 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* form{
+    border: 1px solid black;
+    padding: 4px;
+} */
+form input{
+    width: 100%;
+    padding: 6px 4px;
+    box-sizing: border-box;
+    margin: 4px 0px;
+}
+
+
+form .firstLast{
+    display: flex;
+    justify-content: space-between;
+}
+
+form .firstLast .input-field{
+    flex-basis: 48%;
+}
+
+.error{
+    color: #d93025;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    position: relative;
+    top: -6px;
+    width: 10%;
+}
+
+button{
+    display: block;
+    margin: 6px auto;
+    padding: .6em 1em;
+    width: 100%;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 2px;
+    border: none;
+    background-color: green;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(1, 112, 1);
+}

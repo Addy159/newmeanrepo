@@ -1,0 +1,35 @@
+<div class="container">
+    <form [formGroup]="createStudentForm" (submit)="createStudent()">
+
+        <div class="firstLast">
+
+            <div class="input-field">
+                <label for="">First Name</label>
+                <input type="text" formControlName="fname">
+                <!-- <span class="error" *ngIf="(createControl['fname']?.touched || submitted && createControl['fname']?.errors?.['required'])"> <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    Enter First Name</span> -->
+            </div>
+    
+            <div class="input-field">
+                <label for="">Last Name</label>
+                <input type="text" formControlName="lname">
+                <!-- <span class="error" *ngIf="(createControl['lname']?.touched || submitted && createControl['lname']?.errors?.['required'])"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>Enter Last Name</span> -->
+            </div>
+
+        </div>
+        
+        <div class="input-field">
+            <label for="">Email</label>
+            <input type="text" formControlName="email">
+            <!-- <span class="error" *ngIf="(createControl['email']?.touched || submitted && createControl['email']?.errors?.['required'])"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>Enter email</span> -->
+        </div>
+
+        <div class="input-field">
+            <label for="">Telephone</label>
+            <input type="text" formControlName="telephone">
+            <!-- <span class="error" *ngIf="(createControl['telephone']?.touched || submitted && createControl['telephone']?.errors?.['required'])"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>Enter telephone number</span> -->
+        </div>
+        
+        <button>Create</button>
+    </form>
+</div>

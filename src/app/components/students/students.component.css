@@ -1,0 +1,147 @@
+#students {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 96%;
+    margin: 2% auto;
+    /* text-align: center; */
+  }
+  
+  #students td, #students th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+
+  #students th{
+    text-align: center;
+  }
+  
+  #students tr:nth-child(even){background-color: #f2f2f2;}
+/*   
+  #students tr:hover {background-color: #ddd;} */
+  
+  #students th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: black;
+    color: white;
+  }
+
+
+  .createStudent{
+    display: block;
+    margin: 0 auto;
+    color: white;
+    background-color: green;
+    border: none;
+    padding: .4em 1.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+
+
+
+
+  /* edit students */
+
+  .container{
+    display: none;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.763);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+}
+
+/* form{
+    border: 1px solid black;
+    padding: 4px;
+} */
+
+form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+}
+form input{
+    width: 100%;
+    padding: 6px 4px;
+    box-sizing: border-box;
+    margin: 4px 0px;
+}
+
+
+form .firstLast{
+    display: flex;
+    justify-content: space-between;
+}
+
+form .firstLast .input-field{
+    flex-basis: 48%;
+}
+
+form button{
+    display: block;
+    margin: 6px auto;
+    padding: 10px 25px;
+    width: 100%;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 2px;
+    border: none;
+    background-color: green;
+    cursor: pointer;
+}
+
+form button:hover{
+    background-color: rgb(1, 112, 1);
+}
+
+.close{
+    position: absolute;
+    right: 6px;
+    top: -18px;
+    font-size: 22px;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.button{
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+
+.view{
+    background-color: #4CAF50;
+}
+
+.view:hover{
+    background-color: #449b47;
+}
+
+.edit{
+    background-color: rgb(244, 221, 41);
+}
+
+.edit:hover{
+    background-color: rgb(222, 201, 37);
+}
+
+.delete{
+    background-color: #f44336;
+}
+
+.delete:hover{
+    background-color: #de3d31;
+}
